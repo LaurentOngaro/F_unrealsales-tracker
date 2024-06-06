@@ -26,7 +26,9 @@
     "upload": "aws s3 sync build/ s3://unrealsales-tracker --acl public-read --cache-control public,max-age=604800",
     "deploy": "npm run build && npm run upload"
   },
-
+  "eslintConfig": {
+    "extends": "react-app"
+  },
   "browserslist": {
     "production": [
       ">0.2%",
