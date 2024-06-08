@@ -54,7 +54,6 @@ class MoveToList extends React.PureComponent {
         await removeProductFromList(slug, selectedList);
         await addProductToList(slug, listId);
         await getLists();
-        window.gtag('event', 'tracker', { 'type': 'move', 'slug': slug });
         setProcessingForm('movingProduct', false);
         this.setState({
             moveConfirmation: false,

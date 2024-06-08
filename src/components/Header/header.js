@@ -18,7 +18,6 @@ class Header extends React.PureComponent {
   redirect(path, e) {
     e.preventDefault();
     e.stopPropagation();
-    window.gtag("event", "navbar_click", { path: path });
     window.tracker.appHistory.push(path);
   }
   logout() {

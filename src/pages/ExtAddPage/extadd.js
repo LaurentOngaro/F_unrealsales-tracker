@@ -60,7 +60,7 @@ class ExtAdd extends React.PureComponent {
             return window.tracker.appHistory.push('/tracker/login/?product=' + url);
         }
         if (!listId || Object.keys(lists).length === 0) {
-           await getLists();
+            await getLists();
         }
 
         this.setState({
@@ -78,7 +78,6 @@ class ExtAdd extends React.PureComponent {
             await addProduct(slug);
             await addProductToList(slug, listId);
             this.setState({added: true});
-            window.gtag('event', 'add_product', {'method': 'external'});
             window.location = url;
         }
     }
@@ -104,7 +103,7 @@ class ExtAdd extends React.PureComponent {
                     <Row>
                         <Col md={12} className="extadd-page__text">
                             <h5>
-                                We're adding the product({slug}) to list {list.listName}&nbsp; 
+                                We're adding the product({slug}) to list {list.listName}&nbsp;
                                 <small>
                                     and redirect you back to <a href={url}>{url}</a> once complete!
                                 </small>
@@ -127,12 +126,12 @@ class ExtAdd extends React.PureComponent {
             slug: '',
             url: '',
         };
-    
+
         name = name.replace(/[[]/, '\\[').replace(/[\]]/, '\\]');
         let regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
         let results = regex.exec(window.location.search);
         response.url = results && results.length > 0 ? decodeURIComponent(results[1].replace(/\+/g, ' ')) : '';
-    
+
         let slugRegex = /^https:\/\/(www\.|)unrealengine\.com\/marketplace\/(.*)\/(slug|product)\/([a-z0-9-]+)(\/|)/i;
         let slugMatches = response.url.match(slugRegex);
         if (slugMatches) response.slug = slugMatches[4];

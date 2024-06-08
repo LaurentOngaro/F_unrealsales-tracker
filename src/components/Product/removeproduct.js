@@ -49,7 +49,6 @@ class RemoveProduct extends React.PureComponent {
         setProcessingForm('removingProduct', true);
         await removeProductFromList(slug, selectedList);
         await getLists();
-        window.gtag('event', 'tracker', {'type': 'delete', 'slug': slug})
         setProcessingForm('removingProduct', false);
     }
 

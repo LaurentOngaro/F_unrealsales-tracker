@@ -52,7 +52,7 @@ class Product extends React.PureComponent {
             console.error(e);
         }
     }
-  
+
     render() {
         const { product, slug, filters } = this.props;
 
@@ -78,10 +78,9 @@ class Product extends React.PureComponent {
                 <div className="product__image-container">
                     <Card.Img variant="top" src={product.thumbnail} />
                     <div className="product__image-overlay">
-                        <a 
+                        <a
                             target="_blank"
                             rel="noopener noreferrer"
-                            onClick={() => {window.gtag('event', 'tracker', {'type': 'visit_product', 'slug': slug});}}
                             href={'https://www.unrealengine.com/marketplace/en-US/product/' + slug}
                         >
                             <FaExternalLinkAlt size='2rem'/>
@@ -92,7 +91,7 @@ class Product extends React.PureComponent {
                     <div className="product__image-badgeoverlay">
                         {product.discounted &&
                             <Badge variant="success" className="product__image-onsalebadge">
-                                On Sale! {100 - product.discountPercentage}% off 
+                                On Sale! {100 - product.discountPercentage}% off
                             </Badge>
                         }
                     </div>
@@ -105,7 +104,7 @@ class Product extends React.PureComponent {
                             <Badge variant="danger"> {this.convertPrice(product.discountPriceValue)} </Badge>
                         }
                         {product.categories && product.categories.length > 0 &&
-                            <Badge variant="info" className="product__category" style={{ 
+                            <Badge variant="info" className="product__category" style={{
                                     backgroundColor: stringToColor(product.categories[0].name)
                                 }}>
                                 {product.categories[0].name}
@@ -123,9 +122,9 @@ class Product extends React.PureComponent {
     }
 
     convertPrice(price) {
-       
+
         const { product, currency, currencyRate } = this.props;
-        
+
         let formattedCurrencyCode = currency;
         if (currency === 'EUR') formattedCurrencyCode = '€';
         if (currency === 'USD') {

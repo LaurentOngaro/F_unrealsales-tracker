@@ -41,7 +41,6 @@ class ListManager extends React.PureComponent {
         if (!this.state.createListInput) return;
 
         setProcessingForm('operateList', true);
-        window.gtag('event', 'tracker', {'type': 'create-list'})
         await createList(this.state.createListInput);
         this.setState({
             createListInput: '',
@@ -54,7 +53,6 @@ class ListManager extends React.PureComponent {
         if (!window.confirm("Are you sure you want to remove list " + list.listName)) return;
 
         setProcessingForm('operateList', true);
-        window.gtag('event', 'tracker', {'type': 'delete-list'});
         await removeList(list.listId);
         setProcessingForm('operateList', false);
     }

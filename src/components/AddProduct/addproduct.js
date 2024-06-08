@@ -67,7 +67,6 @@ class AddProduct extends React.PureComponent {
         setProduct(slug, productData);
         await getLists();
 
-        window.gtag('event', 'add_product', {'method': 'form'});
         setProcessingForm('addingProduct', false);
         this.setState({
             newSlug:'',

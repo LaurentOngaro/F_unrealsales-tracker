@@ -25,7 +25,6 @@ class Tracker extends React.PureComponent {
         const { userToken } = this.props;
 
         if (!userToken) {
-            window.gtag('event', 'tracker', {'type': 'loggedout'});
             window.tracker.appHistory.push('/tracker/login/');
         }
     }
@@ -44,7 +43,7 @@ class Tracker extends React.PureComponent {
                 <Row className="main-page__footer">
                     <Col lg={10} sm={12}>
                         <div className="tracker-footer">
-                            Need of support? create an issue <a target="_blank" rel="noopener noreferrer" href="https://github.com/CGeorges/unrealsales-tracker/issues">here</a>. 
+                            Need of support? create an issue <a target="_blank" rel="noopener noreferrer" href="https://github.com/CGeorges/unrealsales-tracker/issues">here</a>.
                             This project is OpenSource, feel free to <a target="_blank" rel="noopener noreferrer" href="https://github.com/CGeorges/unrealsales-tracker">contribute</a>.
                             Follow us on <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/VoDooStudios"><FaTwitter /></a>
                         </div>

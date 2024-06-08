@@ -63,8 +63,7 @@ class Register extends React.PureComponent {
             try {
                 // Register user
                 await registerUser(registerForm);
-                window.gtag('event', 'register', {'result': 'succesful'});
-                
+
                 // Automatically log in user
                 let userProfile = await loginUser(registerForm);
                 setUserToken(userProfile.userToken);
@@ -74,7 +73,6 @@ class Register extends React.PureComponent {
                 window.tracker.appHistory.push('/tracker/');
             } catch(err) {
                 setProcessingForm('registrationForm', false);
-                window.gtag('event', 'register', {'result': 'error'});
                 console.error(err);
             }
         }

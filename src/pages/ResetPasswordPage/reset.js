@@ -54,9 +54,7 @@ class Reset extends React.PureComponent {
             try {
                 await resetPassword(resetForm);
                 setProcessingForm('resetForm', false);
-                window.gtag('event', 'reset', {'result': 'succesful'});
             } catch(err) {
-                window.gtag('event', 'reset', {'result': 'error'});
                 setProcessingForm('resetForm', false);
                 console.error(err);
             }
@@ -84,10 +82,10 @@ class Reset extends React.PureComponent {
                                     <Form.Label>Email address</Form.Label>
                                     <Form.Control
                                         required
-                                        defaultValue={resetForm.email} 
-                                        onChange={this.onChange.bind(this)} 
+                                        defaultValue={resetForm.email}
+                                        onChange={this.onChange.bind(this)}
                                         name="email"
-                                        type="email" 
+                                        type="email"
                                         placeholder="Enter email" />
                                 </Form.Group>
                                 <Button disabled={isProcessing} variant="primary" type="submit">

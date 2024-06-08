@@ -64,16 +64,14 @@ class ChangePassword extends React.PureComponent {
                 }
                 await changePassword(payload);
                 setProcessingForm('changePasswordForm', false);
-                window.gtag('event', 'changepassword', {'result': 'succesful'});
                 window.tracker.appHistory.push('/tracker/login');
             } catch(err) {
-                window.gtag('event', 'changepassword', {'result': 'error'});
                 setProcessingForm('changePasswordForm', false);
                 setChangePasswordForm({systemFail: true})
                 console.error(err);
             }
         }
-        
+
     }
     render() {
         const { isProcessing, changePasswordForm } = this.props;
@@ -108,7 +106,7 @@ class ChangePassword extends React.PureComponent {
                                 <Form.Control
                                     required
                                     minLength="6"
-                                    defaultValue={changePasswordForm.password} 
+                                    defaultValue={changePasswordForm.password}
                                     onChange={this.onChange.bind(this)}
                                     name="password"
                                     type="password"/>
@@ -121,7 +119,7 @@ class ChangePassword extends React.PureComponent {
                                 <Form.Control
                                     required
                                     isInvalid={changePasswordForm.retypeInvalid}
-                                    defaultValue={changePasswordForm.passwordRetype} 
+                                    defaultValue={changePasswordForm.passwordRetype}
                                     onChange={this.onChange.bind(this)}
                                     name="passwordRetype"
                                     type="password" />
