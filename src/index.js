@@ -64,9 +64,9 @@ const history = createBrowserHistory();
 window.tracker.appHistory = history;
 
 // Delegate api url
-window.tracker.api_endpoint = 'http://51.38.224.141:3000/prod/';
+window.tracker.api_endpoint = 'http://51.38.224.141:3000/tracker/';
 if (window.location.href.indexOf("localhost") > -1) {
-    window.tracker.api_endpoint = 'http://51.38.224.141:3000/dev/';
+    window.tracker.api_endpoint = 'http://51.38.224.141:3000/tracker/';
 }
 ReactDOM.render(
     <Provider store={store}>
