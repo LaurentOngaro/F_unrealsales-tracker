@@ -1,7 +1,7 @@
 
 ![Test](https://github.com/CGeorges/unrealsales-tracker/workflows/Test/badge.svg)
 
-This project can be used on http://51.38.224.141:3000224.141:3000
+This project can be used on http://51.38.224.141:3000
 
 ## Usage
 

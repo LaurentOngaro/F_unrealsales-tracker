@@ -69,11 +69,11 @@ class Faq extends React.PureComponent {
                                 <Accordion.Collapse eventKey="5">
                                     <Card.Body>
                                         <p>Increase your reach when you run a sale by adding an "Add to wishlist" shortcut in your product page so that customers can easily add your product to their list. To do so add a link in the description that follows this pattern:
-                                        http://51.38.224.141:3000224.141:3000/tracker/add?product=[Your product link]</p>
+                                        http://51.38.224.141:3000/tracker/add?product=[Your product link]</p>
 
                                         <p>for example:</p>
 
-                                        <p>http://51.38.224.141:3000224.141:3000/tracker/add?product=https://www.unrealengine.com/marketplace/en-US/product/forest-mountain-stylized-biome</p>
+                                        <p>http://51.38.224.141:3000/tracker/add?product=https://www.unrealengine.com/marketplace/en-US/product/forest-mountain-stylized-biome</p>
                                 </Card.Body>
                                 </Accordion.Collapse>
                             </Card>
