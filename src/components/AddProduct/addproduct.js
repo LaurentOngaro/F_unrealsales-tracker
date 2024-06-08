@@ -74,16 +74,16 @@ class AddProduct extends React.PureComponent {
         });
 
     }
-    
+
     render() {
         const { isProcessing } = this.props;
 
         return (
                 <Row className="addproduct">
                     <Col md={12} className="addproduct__trigger-container">
-                        <a 
+                        <a
                             className="addproduct__trigger"
-                            href="#addproduct" 
+                            href="#addproduct"
                             onClick={this.onShowClick.bind(this)}
                             aria-controls="addproduct-collapse"
                             aria-expanded={this.state.showAddProduct}>
@@ -97,8 +97,8 @@ class AddProduct extends React.PureComponent {
 
                         </a>
                         <small>
-                            or drag this link 
-                            (<a href={this.constructAddLink()}>Add to Wishlist</a>) 
+                            or drag this link
+                            (<a href={this.constructAddLink()}>Add to Wishlist</a>)
                             to you Bookmarks bar and press it when you're on a UE4 marketplace product page
                         </small>
                     </Col>
@@ -139,7 +139,11 @@ class AddProduct extends React.PureComponent {
         let href = window.location.href;
         let link = href + (href.substring(href.length-1) === '/' ? '' : '/') + 'add?product=';
         // eslint-disable-next-line no-script-url
-        return 'javascript:(function(){if(window.location.href.indexOf("unrealsales.io")!==-1)return;f="' + link + '"+window.location.href;location.href=f;})()'
+        return (
+          'javascript:(function(){if(window.location.href.indexOf("http://51.38.224.141:3000/")!==-1)return;f="' +
+          link +
+          '"+window.location.href;location.href=f;})()'
+        );
     }
 }
 

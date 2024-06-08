@@ -56,7 +56,7 @@ class Faq extends React.PureComponent {
                             </Card>
                             <Card>
                                 <Accordion.Toggle as={Card.Header} eventKey="4">
-                                    I have an issue with UnrealSales.io, where I can report it?
+                                    I have an issue with 51.38.224.141:3000, where I can report it?
                                 </Accordion.Toggle>
                                 <Accordion.Collapse eventKey="4">
                                     <Card.Body>Please use our issues page <a target="_blank" rel="noopener noreferrer" href="https://github.com/CGeorges/unrealsales-tracker/issues">here</a> and try to describe your issue as best as possible and with as many details you can.</Card.Body>
@@ -69,11 +69,11 @@ class Faq extends React.PureComponent {
                                 <Accordion.Collapse eventKey="5">
                                     <Card.Body>
                                         <p>Increase your reach when you run a sale by adding an "Add to wishlist" shortcut in your product page so that customers can easily add your product to their list. To do so add a link in the description that follows this pattern:
-                                        https://unrealsales.io/tracker/add?product=[Your product link]</p>
+                                        http://51.38.224.141:3000224.141:3000/tracker/add?product=[Your product link]</p>
 
                                         <p>for example:</p>
 
-                                        <p>https://unrealsales.io/tracker/add?product=https://www.unrealengine.com/marketplace/en-US/product/forest-mountain-stylized-biome</p>
+                                        <p>http://51.38.224.141:3000224.141:3000/tracker/add?product=https://www.unrealengine.com/marketplace/en-US/product/forest-mountain-stylized-biome</p>
                                 </Card.Body>
                                 </Accordion.Collapse>
                             </Card>

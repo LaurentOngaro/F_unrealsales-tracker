@@ -25,9 +25,9 @@ import Faq from './pages/Faq/faq';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-if (!window.location.host.startsWith('www')){
-    window.location = window.location.protocol + '//www.' + window.location.host + window.location.pathname + window.location.search;
-}
+//if (!window.location.host.startsWith('www')){
+//    window.location = window.location.protocol + '//www.' + window.location.host + window.location.pathname + window.location.search;
+//}
 
 // Rehydrate currency rates that are not older than 24 hours
 let parsedRates = JSON.parse(localStorage.getItem('rates'));
@@ -64,9 +64,9 @@ const history = createBrowserHistory();
 window.tracker.appHistory = history;
 
 // Delegate api url
-window.tracker.api_endpoint = 'https://api.unrealsales.io/prod/';
+window.tracker.api_endpoint = 'http://51.38.224.141:3000224.141:3000/prod/';
 if (window.location.href.indexOf("localhost") > -1) {
-    window.tracker.api_endpoint = 'https://api.unrealsales.io/dev/';
+    window.tracker.api_endpoint = 'http://51.38.224.141:3000224.141:3000/dev/';
 }
 ReactDOM.render(
     <Provider store={store}>
